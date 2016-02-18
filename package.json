@@ -1,7 +1,7 @@
 {
-  "name": "plivo",
-  "version": "0.3.3",
-  "description": "Plivo NodeJS helper library.",
+  "name": "plivo-promise",
+  "version": "1.0.0",
+  "description": "Plivo NodeJS helper library.Now with promise",
   "main": "lib/plivo.js",
   "repository": {
     "type": "git",
@@ -24,8 +24,8 @@
     "test": "test"
   },
   "devDependencies": {
-    "nock": "~0.14.2",
-    "mocha": "~1.7.4"
+    "nock": "~7.2.1",
+    "mocha": "~2.4.5"
   },
   "scripts": {
     "test": "mocha --reporter spec"
