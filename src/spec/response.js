@@ -1,60 +1,64 @@
 const definitions = {
-	conference: {
+	Response: {
+		element:'Response',
+	  nestables:['Speak', 'Play', 'GetDigits', 'Record', 'Dial', 'Message', 'Redirect', 'Wait', 'Hangup', 'PreAnswer', 'Conference', 'DTMF'],
+	},
+	Conference: {
 		element : 'Conference',
 		validAttributes : ['muted', 'beep', 'startConferenceOnEnter', 'endConferenceOnExit', 'waitSound', 'enterSound', 'exitSound', 'timeLimit', 'hangupOnStar', 'maxMembers', 'record','recordWhenAlone', 'recordFileFormat', 'action', 'method', 'redirect', 'digitsMatch', 'callbackUrl', 'callbackMethod', 'stayAlone', 'floorEvent', 'transcriptionType', 'transcriptionUrl', 'transcriptionMethod', 'relayDTMF'],
-	}
-	number: {
-		element : 'Number',
+	},
+	Number: {
 		validAttributes : ['sendDigits', 'sendOnPreanswer', 'sendDigitsMode'],
-	}
-	user: {
+		element : 'Number',
+	},
+	User: {
 		element : 'User',
 		validAttributes : ['sendDigits', 'sendOnPreanswer', 'sipHeaders'],
-	}
-	dial: {
+	},
+	Dial: {
 		element : 'Dial',
 		validAttributes : ['action', 'method', 'timeout', 'hangupOnStar', 'timeLimit', 'callerId', 'callerName', 'confirmSound', 'dialMusic', 'confirmKey', 'redirect', 'callbackUrl', 'callbackMethod', 'digitsMatch', 'digitsMatchBLeg', 'sipHeaders'],
     nestables : ['Number', 'User']
-	}
-	getDigits: {
+	},
+	GetDigits: {
 		element : 'GetDigits',
 		validAttributes : ['action', 'method', 'timeout', 'digitTimeout', 'finishOnKey', 'numDigits', 'retries', 'invalidDigitsSound', 'validDigits', 'playBeep', 'redirect', 'log'],
     nestables : ['Speak', 'Play', 'Wait']
-	}
-	hangup: {
+	},
+	Hangup: {
 		element : 'Hangup',
 		validAttributes : ['schedule', 'reason'],
-	}
-	message: {
+	},
+	Message: {
 		element : 'Message',
 		validAttributes : ['src', 'dst', 'type', 'callbackUrl', 'callbackMethod'],
-	}
-	play: {
+	},
+	Play: {
 		element : 'Play',
 		validAttributes : ['loop'],
-	}
-	preAnswer: {
+	},
+	PreAnswer: {
 		element : 'PreAnswer',
 		validAttributes : [],
     nestables : ['Play', 'Speak', 'GetDigits', 'Wait', 'Redirect', 'Message', 'DTMF']
-	}
-	record: {
+	},
+	Record: {
 		element : 'Record',
 		validAttributes : ['action', 'method', 'timeout', 'finishOnKey', 'maxLength', 'playBeep', 'recordSession', 'startOnDialAnswer', 'redirect', 'fileFormat', 'callbackUrl', 'callbackMethod', 'transcriptionType', 'transcriptionUrl', 'transcriptionMethod'],
-	}
-	redirect: {
+	},
+	Redirect: {
 		element : 'Redirect',
 		validAttributes : ['method'],
-	}
-	speak: {
+	},
+	Speak: {
 		element : 'Speak',
 		validAttributes : ['voice', 'language', 'loop'],
-	}
-	wait: {
+	},
+	Wait: {
 		element : 'Wait',
 		validAttributes : ['length', 'silence', 'min_silence', 'minSilence', 'beep'],
-	}
-	dtmf: {
+	},
+	DTMF: {
 		element : 'DTMF',
 		validAttributes : ['digits', 'async'],
 	}
