@@ -18,7 +18,7 @@ Installation
 ---------------
 Installing using npm (node package manager):
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-npm install plivo
+npm install plivo-promise@0.5.5-alpha
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ## Usage
 
